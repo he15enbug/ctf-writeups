@@ -22,3 +22,7 @@
             flag = flag + chr(b1) + chr(b2)
     return flag
     ```
+
+#### vault-door-training
+
+- The flag is in the source code: `picoCTF{w4rm1ng_Up_w1tH_jAv4_be8d9806f18}`
