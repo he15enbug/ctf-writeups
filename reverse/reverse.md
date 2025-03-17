@@ -26,3 +26,9 @@
 #### vault-door-training
 
 - The flag is in the source code: `picoCTF{w4rm1ng_Up_w1tH_jAv4_be8d9806f18}`
+
+### Medium
+
+#### GDB baby step {1,2,3,4}
+
+- Use `gdb` commands
