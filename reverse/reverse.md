@@ -63,3 +63,16 @@
     # The content of the flag
     ```
   - Ensure the total length of the new `func_table` is `4 * 32`, otherwise, `check_table()` will fail
+
+#### Bit-O-Asm
+
+- Bit-O-Asm-1: `mov    eax,0x30`
+- Bit-O-Asm-2:
+
+    ```assembly
+    mov    DWORD PTR [rbp-0x4],0x9fe1a
+    mov    eax,DWORD PTR [rbp-0x4]
+    ```
+
+- Bit-O-Asm-3: `eax` is `0x9fe1a * 0x4 + 0x1f5` (`2619997`)
+- Bit-O-Asm-4: `eax` is `0x9fe1a - 0x65` (`654773`)
