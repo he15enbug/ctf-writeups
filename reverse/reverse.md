@@ -51,3 +51,15 @@
 
   - We cannot input `win`, instead, we use `globals()` to bypass this filter: `globals()['w' + 'in']`
 - Picker III
+  - We are only allowed to select from 4 functions in the `func_table`
+  - Use `write_variable` to overwrite the value of `func_table`, making `win` the first function in this table, i.e., ensure the first 4 characters are `w`, `i`, `n`, and space
+
+    ```shell
+    $ nc saturn.picoctf.net 50765
+    ==> 3
+    Please enter variable name to write: func_table
+    Please enter new value of variable: 'win t_table                     read_variable                   write_variable                  getRandomNumber                 '
+    ==> 1
+    # The content of the flag
+    ```
+  - Ensure the total length of the new `func_table` is `4 * 32`, otherwise, `check_table()` will fail
