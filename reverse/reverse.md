@@ -32,3 +32,22 @@
 #### GDB baby step {1,2,3,4}
 
 - Use `gdb` commands
+
+#### Picker
+
+- Picker I
+  - In the source code, the program process the user input in this way: `eval(user_input + '()')`
+  - Ideally, we should input `getRandomNumber`, and the program will call this function `getRandomNumber()`
+  - There's another function `win()` that prints out the flag: `0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x34 0x5f 0x64 0x31 0x34 0x6d 0x30 0x6e 0x64 0x5f 0x31 0x6e 0x5f 0x37 0x68 0x33 0x5f 0x72 0x30 0x75 0x67 0x68 0x5f 0x62 0x35 0x32 0x33 0x62 0x32 0x61 0x31 0x7d`
+- Picker II
+  - This time there is a filter:
+
+    ```python
+    def filter(user_input):
+        if 'win' in user_input:
+            return False
+        return True
+    ```
+
+  - We cannot input `win`, instead, we use `globals()` to bypass this filter: `globals()['w' + 'in']`
+- Picker III
