@@ -76,3 +76,12 @@
 
 - Bit-O-Asm-3: `eax` is `0x9fe1a * 0x4 + 0x1f5` (`2619997`)
 - Bit-O-Asm-4: `eax` is `0x9fe1a - 0x65` (`654773`)
+
+#### vault-door
+
+- vault-door-1: read the code and recover the password
+- vault-door-2: this challenge is missing
+- vault-door-3: the password is processed, reverse this process with a script
+- vault-door-4: convert bytes to string, note the different representations of octal numbers in `Java` (e.g., `0160`) and `Python` (e.g., `0o160`)
+- vault-door-5:
+- vault-door-6:
